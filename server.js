@@ -246,6 +246,18 @@ function sendJson(res, status, payload) {
   res.end(JSON.stringify(payload));
 }
 
+function getPublicFiles() {
+  if (!fs.existsSync(PUBLIC_DIR)) {
+    return [];
+  }
+  return fs.readdirSync(PUBLIC_DIR).sort();
+}
+
+function getRootAppFiles() {
+  return ["index.html", "app.js", "styles.css"]
+    .filter(file => fs.existsSync(path.join(ROOT, file)));
+}
+
 function sendCookie(res, name, value, options = {}) {
   const parts = [`${name}=${value}`, "Path=/", "SameSite=Lax", "HttpOnly"];
   if (options.maxAge !== undefined) {
@@ -528,6 +540,19 @@ function validateStory(body, user = null) {
 }
 
 async function handleApi(req, res, pathname) {
+  if (req.method === "GET" && pathname === "/api/health") {
+    sendJson(res, 200, {
+      ok: true,
+      root: ROOT,
+      publicDir: PUBLIC_DIR,
+      publicExists: fs.existsSync(PUBLIC_DIR),
+      publicFiles: getPublicFiles(),
+      rootAppFiles: getRootAppFiles(),
+      indexExists: fs.existsSync(path.join(PUBLIC_DIR, "index.html")) || fs.existsSync(path.join(ROOT, "index.html"))
+    });
+    return;
+  }
+
   if (req.method === "GET" && pathname === "/api/auth/me") {
     const db = readDatabase();
     sendJson(res, 200, { user: publicUser(getCurrentUser(req, db)) });
@@ -706,19 +731,29 @@ async function handleApi(req, res, pathname) {
 
 function serveStatic(req, res, pathname) {
   const safePath = pathname === "/" ? "/index.html" : pathname;
-  const filePath = path.normalize(path.join(PUBLIC_DIR, safePath));
+  const publicPath = path.normalize(path.join(PUBLIC_DIR, safePath));
+  const rootPath = path.normalize(path.join(ROOT, safePath));
 
-  if (!filePath.startsWith(PUBLIC_DIR)) {
+  if (!publicPath.startsWith(PUBLIC_DIR) || !rootPath.startsWith(ROOT)) {
     res.writeHead(403);
     res.end("Forbidden");
     return;
   }
 
+  const filePath = fs.existsSync(publicPath) ? publicPath : rootPath;
+
   fs.readFile(filePath, (error, data) => {
     if (error) {
+      console.error(`Static file not found: ${filePath}`);
+      console.error(`Public directory exists: ${fs.existsSync(PUBLIC_DIR)}`);
+      console.error(`Public files: ${getPublicFiles().join(", ") || "(none)"}`);
+      console.error(`Root app files: ${getRootAppFiles().join(", ") || "(none)"}`);
       const hasExtension = Boolean(path.extname(filePath));
       if (!hasExtension) {
-        fs.readFile(path.join(PUBLIC_DIR, "index.html"), (fallbackError, fallbackData) => {
+        const publicIndex = path.join(PUBLIC_DIR, "index.html");
+        const rootIndex = path.join(ROOT, "index.html");
+        const fallbackPath = fs.existsSync(publicIndex) ? publicIndex : rootIndex;
+        fs.readFile(fallbackPath, (fallbackError, fallbackData) => {
           if (fallbackError) {
             res.writeHead(404);
             res.end("Not found");
