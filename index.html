@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AboveAI</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-frame">
+      <aside class="sidebar" aria-label="AboveAI navigation">
+        <a class="brand" href="#pulse" data-nav="pulse" aria-label="AboveAI home">
+          <span class="brand-mark">A</span>
+          <span>
+            <strong>AboveAI</strong>
+            <small>Work beyond disruption</small>
+          </span>
+        </a>
+
+        <nav class="nav-list">
+          <button class="nav-link active" type="button" data-nav="pulse">Pulse</button>
+          <button class="nav-link" type="button" data-nav="auth">Sign in</button>
+          <button class="nav-link" type="button" data-nav="share">Share</button>
+          <button class="nav-link" type="button" data-nav="community">Community</button>
+          <button class="nav-link" type="button" data-nav="solutions">Solutions</button>
+          <button class="nav-link" type="button" data-nav="trends">Trends</button>
+        </nav>
+
+        <div class="account-card" id="accountCard">
+          <span class="account-avatar">?</span>
+          <div>
+            <strong id="accountName">Guest</strong>
+            <small id="accountMeta">Sign in to share and chat</small>
+          </div>
+          <button class="text-button" id="logoutButton" type="button" hidden>Log out</button>
+        </div>
+      </aside>
+
+      <main class="screen-stage">
+        <section class="screen active" id="screen-pulse" data-screen="pulse">
+          <div class="hero-band">
+            <div class="hero-copy">
+              <p class="eyebrow">United States IT workforce</p>
+              <h1>AboveAI</h1>
+              <p class="hero-text">A safe, practical space for workers to share what AI is changing at work, understand the patterns, and find a next move.</p>
+            <div class="hero-actions">
+                <button class="primary-button" type="button" data-nav="auth">Join AboveAI</button>
+                <button class="secondary-button" type="button" data-nav="share">Share your story</button>
+                <button class="secondary-button" type="button" data-nav="solutions">Find a path</button>
+              </div>
+            </div>
+            <div class="pulse-visual" aria-label="AboveAI community pulse">
+              <span class="signal-label">Live pulse</span>
+              <strong id="storyCount">0</strong>
+              <span>experiences collected</span>
+              <div class="mini-radar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="screen-grid two-one">
+            <section class="panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">AI insight summary</p>
+                  <h2>What workers are reporting</h2>
+                </div>
+              </div>
+              <div id="pulseCards" class="metric-grid"></div>
+              <div id="pulseClusters" class="cluster-list"></div>
+            </section>
+
+            <section class="panel guidance-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Today&apos;s guidance</p>
+                  <h2>Start with control</h2>
+                </div>
+              </div>
+              <div class="guidance-stack">
+                <article>
+                  <span>1</span>
+                  <p>Document what changed: tool, task, decision maker, and business reason.</p>
+                </article>
+                <article>
+                  <span>2</span>
+                  <p>Separate tasks AI can do from judgment, trust, context, and accountability work.</p>
+                </article>
+                <article>
+                  <span>3</span>
+                  <p>Pick one transition path and build a 30-day proof project.</p>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-auth" data-screen="auth">
+          <div class="screen-header">
+            <div>
+              <p class="eyebrow">Account access</p>
+              <h1>Join the AboveAI community</h1>
+              <p>Create a profile with your role and state, then choose when to post with your name or anonymously.</p>
+            </div>
+          </div>
+
+          <div class="auth-layout">
+            <section class="panel auth-panel">
+              <div class="auth-tabs" role="tablist" aria-label="Authentication options">
+                <button class="tab active" type="button" data-auth-tab="signup">Sign up</button>
+                <button class="tab" type="button" data-auth-tab="login">Log in</button>
+              </div>
+
+              <form id="signupForm" class="story-form auth-form">
+                <div class="form-row two">
+                  <label>
+                    Full name
+                    <input name="name" type="text" required placeholder="Your name">
+                  </label>
+                  <label>
+                    Work email
+                    <input name="email" type="email" required placeholder="you@company.com">
+                  </label>
+                </div>
+                <div class="form-row two">
+                  <label>
+                    Password
+                    <input name="password" type="password" required minlength="8" placeholder="At least 8 characters">
+                  </label>
+                  <label>
+                    Role
+                    <input name="role" type="text" required placeholder="Security Analyst">
+                  </label>
+                </div>
+                <div class="form-row three">
+                  <label>
+                    State
+                    <select name="state" data-state-select required>
+                      <option value="">Select state</option>
+                    </select>
+                  </label>
+                  <label>
+                    Seniority
+                    <select name="seniority" required>
+                      <option value="">Select level</option>
+                      <option>Entry-level</option>
+                      <option>Mid-level</option>
+                      <option>Senior</option>
+                      <option>Manager</option>
+                      <option>Director</option>
+                      <option>Executive</option>
+                    </select>
+                  </label>
+                  <label>
+                    Industry
+                    <input name="industry" type="text" required placeholder="SaaS">
+                  </label>
+                </div>
+                <button class="primary-button" type="submit">Create account</button>
+              </form>
+
+              <form id="loginForm" class="story-form auth-form" hidden>
+                <label>
+                  Email
+                  <input name="email" type="email" required placeholder="you@company.com">
+                </label>
+                <label>
+                  Password
+                  <input name="password" type="password" required placeholder="Your password">
+                </label>
+                <button class="primary-button" type="submit">Log in</button>
+              </form>
+              <p id="authStatus" class="form-status" role="status"></p>
+            </section>
+
+            <aside class="panel trust-panel">
+              <p class="eyebrow">Privacy control</p>
+              <h2>Your identity, your choice</h2>
+              <div class="preview-list">
+                <article>
+                  <strong>Named profile</strong>
+                  <span>Your name, role, state, and industry help others understand your context.</span>
+                </article>
+                <article>
+                  <strong>Anonymous mode</strong>
+                  <span>Use anonymous posting when the workplace details feel sensitive.</span>
+                </article>
+                <article>
+                  <strong>Community access</strong>
+                  <span>Logged-in members can post stories, reply, and join the chat room.</span>
+                </article>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-share" data-screen="share">
+          <div class="screen-header">
+            <div>
+              <p class="eyebrow">Story intake</p>
+              <h1>Share what is happening at work</h1>
+              <p>Post with your account profile, or stay anonymous. AboveAI turns your experience into a structured solution thread.</p>
+            </div>
+            <span class="privacy-note">Anonymous optional</span>
+          </div>
+
+          <div class="screen-grid form-layout">
+            <section class="panel">
+              <form id="storyForm" class="story-form">
+                <div class="form-row two">
+                  <label>
+                    Name
+                    <input name="name" type="text" placeholder="Your name">
+                  </label>
+                  <label class="checkbox-label">
+                    <input name="anonymous" type="checkbox">
+                    Post anonymously
+                  </label>
+                </div>
+
+                <div class="form-row two">
+                  <label>
+                    Role
+                    <input name="role" type="text" required placeholder="Software Engineer">
+                  </label>
+                  <label>
+                    Seniority
+                    <select name="seniority" required>
+                      <option value="">Select level</option>
+                      <option>Entry-level</option>
+                      <option>Mid-level</option>
+                      <option>Senior</option>
+                      <option>Manager</option>
+                      <option>Director</option>
+                      <option>Executive</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="form-row three">
+                  <label>
+                    State
+                    <select name="state" required>
+                      <option value="">Select state</option>
+                    </select>
+                  </label>
+                  <label>
+                    Industry
+                    <input name="industry" type="text" required placeholder="SaaS, healthcare IT">
+                  </label>
+                  <label>
+                    Years
+                    <input name="yearsExperience" type="number" min="0" max="50" value="1">
+                  </label>
+                </div>
+
+                <label>
+                  What is happening because of AI at your workplace?
+                  <textarea name="aiImpact" required rows="6" placeholder="Describe what changed, who it affects, and what feels uncertain."></textarea>
+                </label>
+
+                <label>
+                  What solution or guidance do you need?
+                  <textarea name="supportNeeded" required rows="3" placeholder="Career pivot, certification roadmap, manager conversation, legal/policy clarity, mental health support..."></textarea>
+                </label>
+
+                <button class="primary-button" type="submit">Share and get guidance</button>
+                <p id="formStatus" class="form-status" role="status"></p>
+              </form>
+            </section>
+
+            <aside class="panel preview-panel">
+              <p class="eyebrow">What AboveAI creates</p>
+              <h2>Structured help from your story</h2>
+              <div class="preview-list">
+                <article>
+                  <strong>AI summary</strong>
+                  <span>A short explanation of your situation without losing the human context.</span>
+                </article>
+                <article>
+                  <strong>Concern grouping</strong>
+                  <span>Similar stories grouped by role, state, and workplace impact.</span>
+                </article>
+                <article>
+                  <strong>Solution thread</strong>
+                  <span>Practical steps for upskilling, career pivots, policy questions, and wellbeing.</span>
+                </article>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-community" data-screen="community">
+          <div class="screen-header compact">
+            <div>
+              <p class="eyebrow">Community room</p>
+              <h1>Stories from IT workers</h1>
+            </div>
+            <div class="toolbar">
+              <input id="searchInput" type="search" placeholder="Search role, state, concern">
+              <select id="filterSelect" aria-label="Filter stories">
+                <option value="all">All concerns</option>
+              </select>
+            </div>
+          </div>
+          <div class="community-layout">
+            <section>
+              <div id="storyFeed" class="story-feed"></div>
+            </section>
+            <aside class="panel chat-panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Live room</p>
+                  <h2>Community chat</h2>
+                </div>
+              </div>
+              <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+              <form id="chatForm" class="chat-form">
+                <label class="checkbox-label compact-check">
+                  <input name="anonymous" type="checkbox">
+                  Chat anonymously
+                </label>
+                <textarea name="body" rows="3" required placeholder="Share a thought, question, or resource"></textarea>
+                <button class="primary-button" type="submit">Send message</button>
+                <p id="chatStatus" class="form-status" role="status"></p>
+              </form>
+            </aside>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-solutions" data-screen="solutions">
+          <div class="screen-header">
+            <div>
+              <p class="eyebrow">Solution lab</p>
+              <h1>Find practical ways forward</h1>
+              <p>Explore recommended paths for upskilling, career pivots, policy clarity, and mental health support.</p>
+            </div>
+          </div>
+
+          <div class="solution-workbench">
+            <section class="panel planner-card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Personalized planner</p>
+                  <h2>Build a 30-day response plan</h2>
+                </div>
+              </div>
+              <div class="form-row two">
+                <label>
+                  Your role
+                  <select id="rolePlanner">
+                    <option>Software Engineer</option>
+                    <option>QA Engineer</option>
+                    <option>IT Support Specialist</option>
+                    <option>Systems Administrator</option>
+                    <option>Security Analyst</option>
+                    <option>Engineering Manager</option>
+                  </select>
+                </label>
+                <label>
+                  Biggest concern
+                  <select id="concernPlanner">
+                    <option value="automation">Automation</option>
+                    <option value="layoffs">Layoffs</option>
+                    <option value="upskilling">Upskilling</option>
+                    <option value="governance">Policy and governance</option>
+                    <option value="stress">Stress and uncertainty</option>
+                  </select>
+                </label>
+              </div>
+              <div id="planOutput" class="plan-output"></div>
+            </section>
+
+            <section class="panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Resource library</p>
+                  <h2>Recommended paths</h2>
+                </div>
+              </div>
+              <div class="solution-tabs" role="tablist" aria-label="Solution categories">
+                <button class="tab active" type="button" data-category="All">All</button>
+                <button class="tab" type="button" data-category="Upskilling">Upskilling</button>
+                <button class="tab" type="button" data-category="Career pivot">Career</button>
+                <button class="tab" type="button" data-category="Leadership">Leadership</button>
+                <button class="tab" type="button" data-category="Wellbeing">Wellbeing</button>
+                <button class="tab" type="button" data-category="Legal / policy">Policy</button>
+              </div>
+              <div id="resourceList" class="resource-list"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="screen" id="screen-trends" data-screen="trends">
+          <div class="screen-header">
+            <div>
+              <p class="eyebrow">Trends map</p>
+              <h1>Common concerns by role and location</h1>
+              <p>AboveAI detects patterns from collected experiences so workers can see they are not facing this alone.</p>
+            </div>
+          </div>
+
+          <div class="screen-grid trends-layout">
+            <section class="panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Concern clusters</p>
+                  <h2>Grouped experiences</h2>
+                </div>
+              </div>
+              <div id="trendClusters" class="cluster-list large"></div>
+            </section>
+
+            <section class="panel">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Location and role</p>
+                  <h2>Where the signal is strongest</h2>
+                </div>
+              </div>
+              <div id="trendBars" class="trend-bars"></div>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="storyTemplate">
+      <article class="story-card">
+        <header>
+          <div>
+            <h3></h3>
+            <p class="meta"></p>
+          </div>
+          <span class="seniority-chip"></span>
+        </header>
+        <p class="impact"></p>
+        <div class="tag-list"></div>
+        <div class="ai-box">
+          <span>AboveAI guidance</span>
+          <p></p>
+        </div>
+        <details>
+          <summary>Open solution thread</summary>
+          <ol class="steps"></ol>
+        </details>
+        <form class="reply-form">
+          <label class="checkbox-label compact-check">
+            <input name="anonymous" type="checkbox">
+            Anonymous
+          </label>
+          <input name="body" placeholder="Share a helpful response">
+          <button type="submit">Reply</button>
+        </form>
+        <div class="replies"></div>
+      </article>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

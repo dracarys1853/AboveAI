@@ -1,0 +1,14 @@
+{
+  "name": "aboveai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AboveAI - a safe space for US IT workers to share AI workplace impact stories and find practical solutions.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

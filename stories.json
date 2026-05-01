@@ -1,0 +1,421 @@
+{
+  "stories": [
+    {
+      "id": "4a474ede-c88e-4807-8e9e-d7b9e915bc86",
+      "createdAt": "2026-05-01T15:02:01.489Z",
+      "name": "Maya Thompson",
+      "anonymous": false,
+      "role": "QA Engineer",
+      "seniority": "Mid-level",
+      "state": "Texas",
+      "industry": "Fintech",
+      "yearsExperience": 6,
+      "aiImpact": "Our team introduced AI-generated test cases. It helped speed up regression work, but two contractors were not renewed and everyone is nervous about what happens next.",
+      "supportNeeded": "I want to move into test strategy and automation architecture instead of only writing test cases.",
+      "tags": [
+        "automation",
+        "upskilling",
+        "stress"
+      ],
+      "replies": [
+        {
+          "id": "d711d5bd-c7d3-4b09-b0b0-6e03bf727d61",
+          "createdAt": "2026-05-01T15:02:01.489Z",
+          "author": "AboveAI Guide",
+          "body": "A strong next move is to own test quality gates, flaky-test strategy, and AI output review. Those are harder to automate away because they need product context."
+        }
+      ]
+    },
+    {
+      "id": "29f8653a-1d98-4a85-8b42-edde4fe46129",
+      "createdAt": "2026-05-01T15:02:01.489Z",
+      "name": "Anonymous",
+      "anonymous": true,
+      "role": "IT Support Specialist",
+      "seniority": "Entry-level",
+      "state": "California",
+      "industry": "Healthcare IT",
+      "yearsExperience": 2,
+      "aiImpact": "A chatbot now handles basic password resets and ticket triage. I am glad users get faster answers, but I need a path beyond repetitive support tickets.",
+      "supportNeeded": "I need a practical roadmap into cloud support or security.",
+      "tags": [
+        "role-change",
+        "automation",
+        "upskilling"
+      ],
+      "replies": []
+    },
+    {
+      "id": "4dc09356-525c-4259-a775-0a06b535aef9",
+      "createdAt": "2026-05-01T15:02:01.489Z",
+      "name": "David Kim",
+      "anonymous": false,
+      "role": "Engineering Manager",
+      "seniority": "Manager",
+      "state": "New York",
+      "industry": "SaaS",
+      "yearsExperience": 12,
+      "aiImpact": "Leadership is asking every team to cut delivery time with AI. People are afraid the productivity gains will become headcount reductions.",
+      "supportNeeded": "I want a humane way to introduce AI without breaking trust with my team.",
+      "tags": [
+        "strategy",
+        "layoffs",
+        "governance"
+      ],
+      "replies": []
+    },
+    {
+      "id": "581eb587-6a05-4518-934a-6d2d371ebf31",
+      "createdAt": "2026-05-01T15:02:35.271Z",
+      "name": "Anonymous",
+      "anonymous": true,
+      "role": "Security Analyst",
+      "seniority": "Senior",
+      "state": "Virginia",
+      "industry": "Managed services",
+      "yearsExperience": 8,
+      "aiImpact": "AI tools are now reviewing alerts before analysts see them, and the team is worried about role changes and accountability.",
+      "supportNeeded": "I need a path into AI governance and security oversight.",
+      "tags": [
+        "governance",
+        "security",
+        "role-change"
+      ],
+      "replies": [],
+      "aiResponse": "You are not behind; you are at a decision point. Based on your role as Security Analyst, start by separating tasks AI can accelerate from the judgment-heavy work people still trust you to own. A practical next move is AI governance and security track. Build one small proof project, write down the outcomes, and use it to guide your next conversation with a manager, mentor, or peer.",
+      "solutionThread": {
+        "title": "Path forward for Security Analyst in Virginia",
+        "summary": "Security Analyst in Virginia is dealing with ai tools are now reviewing alerts before analysts see them, and the team is worried about role changes and accountability. They are looking for I need a path into AI governance and security oversight..",
+        "steps": [
+          "Clarify the highest-risk tasks in the current role: governance and security.",
+          "Choose one adjacent skill path: AI governance and security track.",
+          "Create a 30-day proof project that shows judgment, communication, and AI-enabled productivity.",
+          "Discuss the transition with a manager, mentor, peer group, or workforce advisor using concrete role outcomes."
+        ],
+        "resources": [
+          {
+            "id": "secure-ai-governance",
+            "title": "AI governance and security track",
+            "category": "Upskilling",
+            "roles": [
+              "Security Analyst",
+              "Compliance Analyst",
+              "Manager",
+              "Software Engineer"
+            ],
+            "concerns": [
+              "governance",
+              "security",
+              "policy"
+            ],
+            "description": "Specialize in model risk, data privacy, AI usage policies, prompt security, and vendor evaluation.",
+            "actions": [
+              "Learn NIST AI Risk Management Framework basics",
+              "Audit how AI tools touch company data",
+              "Create a lightweight AI usage policy draft"
+            ]
+          },
+          {
+            "id": "cloud-ai-transition",
+            "title": "Cloud and AI operations transition path",
+            "category": "Career pivot",
+            "roles": [
+              "Help Desk",
+              "IT Support",
+              "Systems Administrator",
+              "Network Engineer"
+            ],
+            "concerns": [
+              "automation",
+              "upskilling",
+              "role-change"
+            ],
+            "description": "Move toward cloud operations, AI tooling support, FinOps, or platform engineering where human judgment still anchors production reliability.",
+            "actions": [
+              "Map your current tickets to cloud services",
+              "Build one AWS, Azure, or GCP project",
+              "Document incident-response stories for interviews"
+            ]
+          },
+          {
+            "id": "mental-health-support",
+            "title": "Stress and uncertainty support plan",
+            "category": "Wellbeing",
+            "roles": [
+              "Any"
+            ],
+            "concerns": [
+              "stress",
+              "burnout",
+              "fear"
+            ],
+            "description": "Use a practical support routine while making career decisions under pressure.",
+            "actions": [
+              "Name the concrete risk, not just the fear",
+              "Find one peer accountability partner",
+              "Use employer EAP or local counseling resources if anxiety becomes hard to manage"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "55d55aac-a657-4a21-a7d9-58d3a845c707",
+      "createdAt": "2026-05-01T15:16:25.968Z",
+      "name": "Anonymous",
+      "anonymous": true,
+      "role": "Associate Software Engineer",
+      "seniority": "Mid-level",
+      "state": "Ohio",
+      "industry": "Healthcare",
+      "yearsExperience": 1,
+      "aiImpact": "AI is raising the bar significantly for entry-level candidates. Many tasks that were previously assigned to junior developers like writing basic code, debugging simple issues, or creating small features are now being automated or assisted by tools like code generators and copilots. As a result, companies are expecting new graduates to already have real-world experience, system design understanding, and the ability to work on more complex problems from day one.\n\nAt the same time, hiring has slowed down for junior roles, while expectations have increased. It feels like the entry point into the industry is shrinking, even though the overall demand for experienced engineers remains high.",
+      "supportNeeded": "I’m trying to understand how to realistically break into the industry in this new environment. Specifically:\n\nWhat skills should entry-level candidates prioritize to stay relevant alongside AI tools?\nHow can someone with limited experience prove their value when even junior tasks are being automated?\nAre there specific types of projects, internships, or roles that still provide a viable entry point?\nHow should candidates position themselves full-stack, AI-focused, backend, etc. to maximize opportunities?\n\nAny practical guidance on adapting to this shift and successfully landing a first role wo",
+      "tags": [
+        "automation",
+        "role-change"
+      ],
+      "replies": [],
+      "aiResponse": "You are not behind; you are at a decision point. Based on your role as Associate Software Engineer, start by separating tasks AI can accelerate from the judgment-heavy work people still trust you to own. A practical next move is Developer plus AI workflow. Build one small proof project, write down the outcomes, and use it to guide your next conversation with a manager, mentor, or peer.",
+      "solutionThread": {
+        "title": "Path forward for Associate Software Engineer in Ohio",
+        "summary": "Associate Software Engineer in Ohio is dealing with ai is raising the bar significantly for entry-level candidates. They are looking for I’m trying to understand how to realistically break into the industry in this new environment. Specifically:\n\nWhat skills should entry-level candidates prioritize to stay relevant alongside AI tools?\nHow can someone with limited experience prove their value when even junior tasks are being automated?\nAre there specific types of projects, internships, or roles that still provide a viable entry point?\nHow should candidates position themselves full-stack, AI-focused, backend, etc. to maximize opportunities?\n\nAny practical guidance on adapting to this shift and successfully landing a first role wo.",
+        "steps": [
+          "Clarify the highest-risk tasks in the current role: automation and role-change.",
+          "Choose one adjacent skill path: Developer plus AI workflow.",
+          "Create a 30-day proof project that shows judgment, communication, and AI-enabled productivity.",
+          "Discuss the transition with a manager, mentor, peer group, or workforce advisor using concrete role outcomes."
+        ],
+        "resources": [
+          {
+            "id": "developer-ai-copilot",
+            "title": "Developer plus AI workflow",
+            "category": "Upskilling",
+            "roles": [
+              "Software Engineer",
+              "QA Engineer",
+              "Data Engineer",
+              "DevOps Engineer"
+            ],
+            "concerns": [
+              "automation",
+              "productivity",
+              "replacement"
+            ],
+            "description": "Turn AI from a threat into leverage by owning architecture, review quality, testing strategy, and production context.",
+            "actions": [
+              "Practice AI-assisted refactoring with tests",
+              "Create review checklists for generated code",
+              "Build a portfolio app showing human-led AI workflows"
+            ]
+          },
+          {
+            "id": "cloud-ai-transition",
+            "title": "Cloud and AI operations transition path",
+            "category": "Career pivot",
+            "roles": [
+              "Help Desk",
+              "IT Support",
+              "Systems Administrator",
+              "Network Engineer"
+            ],
+            "concerns": [
+              "automation",
+              "upskilling",
+              "role-change"
+            ],
+            "description": "Move toward cloud operations, AI tooling support, FinOps, or platform engineering where human judgment still anchors production reliability.",
+            "actions": [
+              "Map your current tickets to cloud services",
+              "Build one AWS, Azure, or GCP project",
+              "Document incident-response stories for interviews"
+            ]
+          },
+          {
+            "id": "secure-ai-governance",
+            "title": "AI governance and security track",
+            "category": "Upskilling",
+            "roles": [
+              "Security Analyst",
+              "Compliance Analyst",
+              "Manager",
+              "Software Engineer"
+            ],
+            "concerns": [
+              "governance",
+              "security",
+              "policy"
+            ],
+            "description": "Specialize in model risk, data privacy, AI usage policies, prompt security, and vendor evaluation.",
+            "actions": [
+              "Learn NIST AI Risk Management Framework basics",
+              "Audit how AI tools touch company data",
+              "Create a lightweight AI usage policy draft"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "fba0ec57-a5dc-48c9-80d7-3ed79b1cde9c",
+      "createdAt": "2026-05-01T15:17:05.359Z",
+      "userId": "33e3fe32-e31d-46aa-aa16-84e830c48972",
+      "name": "Anonymous",
+      "anonymous": true,
+      "role": "Software Engineer",
+      "seniority": "Senior",
+      "state": "New Jersey",
+      "industry": "SaaS",
+      "yearsExperience": 7,
+      "aiImpact": "AI code tools are changing how our sprint work is assigned and people worry about replacement.",
+      "supportNeeded": "I need a strategy to move toward architecture and AI governance.",
+      "tags": [
+        "replacement",
+        "governance"
+      ],
+      "replies": [],
+      "aiResponse": "You are not behind; you are at a decision point. Based on your role as Software Engineer, start by separating tasks AI can accelerate from the judgment-heavy work people still trust you to own. A practical next move is AI governance and security track. Build one small proof project, write down the outcomes, and use it to guide your next conversation with a manager, mentor, or peer.",
+      "solutionThread": {
+        "title": "Path forward for Software Engineer in New Jersey",
+        "summary": "Software Engineer in New Jersey is dealing with ai code tools are changing how our sprint work is assigned and people worry about replacement. They are looking for I need a strategy to move toward architecture and AI governance..",
+        "steps": [
+          "Clarify the highest-risk tasks in the current role: replacement and governance.",
+          "Choose one adjacent skill path: AI governance and security track.",
+          "Create a 30-day proof project that shows judgment, communication, and AI-enabled productivity.",
+          "Discuss the transition with a manager, mentor, peer group, or workforce advisor using concrete role outcomes."
+        ],
+        "resources": [
+          {
+            "id": "secure-ai-governance",
+            "title": "AI governance and security track",
+            "category": "Upskilling",
+            "roles": [
+              "Security Analyst",
+              "Compliance Analyst",
+              "Manager",
+              "Software Engineer"
+            ],
+            "concerns": [
+              "governance",
+              "security",
+              "policy"
+            ],
+            "description": "Specialize in model risk, data privacy, AI usage policies, prompt security, and vendor evaluation.",
+            "actions": [
+              "Learn NIST AI Risk Management Framework basics",
+              "Audit how AI tools touch company data",
+              "Create a lightweight AI usage policy draft"
+            ]
+          },
+          {
+            "id": "developer-ai-copilot",
+            "title": "Developer plus AI workflow",
+            "category": "Upskilling",
+            "roles": [
+              "Software Engineer",
+              "QA Engineer",
+              "Data Engineer",
+              "DevOps Engineer"
+            ],
+            "concerns": [
+              "automation",
+              "productivity",
+              "replacement"
+            ],
+            "description": "Turn AI from a threat into leverage by owning architecture, review quality, testing strategy, and production context.",
+            "actions": [
+              "Practice AI-assisted refactoring with tests",
+              "Create review checklists for generated code",
+              "Build a portfolio app showing human-led AI workflows"
+            ]
+          },
+          {
+            "id": "mental-health-support",
+            "title": "Stress and uncertainty support plan",
+            "category": "Wellbeing",
+            "roles": [
+              "Any"
+            ],
+            "concerns": [
+              "stress",
+              "burnout",
+              "fear"
+            ],
+            "description": "Use a practical support routine while making career decisions under pressure.",
+            "actions": [
+              "Name the concrete risk, not just the fear",
+              "Find one peer accountability partner",
+              "Use employer EAP or local counseling resources if anxiety becomes hard to manage"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "33e3fe32-e31d-46aa-aa16-84e830c48972",
+      "createdAt": "2026-05-01T15:17:05.266Z",
+      "name": "Nitin Demo",
+      "email": "tester990943861@aboveai.test",
+      "passwordHash": "03c54f1a9a8a2325760e5a9e1bc716b0:7d55c512bdae9013fa01a154e5b31088f741e7b753a563abb049eb4b054473ddd56f0aee32476258618ec40dcfd56dc278c29678e35cda6efa912fd99c5b7361",
+      "role": "Software Engineer",
+      "state": "New Jersey",
+      "seniority": "Senior",
+      "industry": "SaaS"
+    },
+    {
+      "id": "6eed653f-22a0-4172-8de9-69073fcb116e",
+      "createdAt": "2026-05-01T15:22:27.277Z",
+      "name": "DRACARYS",
+      "email": "dracarys1853@gmail.com",
+      "passwordHash": "398b0dc14582d1f6ca5d6cff57ece349:7635982a7bbabe15e5a33d962e9aae15cba5514612c25550875bbbfdd139fb3c5f7311d666eaaefa272307ff63a5cb1399696da6ba3a904ad8993c6477ef432b",
+      "role": "Software Engineer",
+      "state": "California",
+      "seniority": "Senior",
+      "industry": "Banking"
+    }
+  ],
+  "chatMessages": [
+    {
+      "id": "60884442-7806-4bc7-a9ab-70d036cee23a",
+      "createdAt": "2026-05-01T15:17:05.374Z",
+      "userId": "33e3fe32-e31d-46aa-aa16-84e830c48972",
+      "author": "Nitin Demo",
+      "role": "Software Engineer",
+      "state": "New Jersey",
+      "anonymous": false,
+      "body": "Testing the new AboveAI community chat room."
+    },
+    {
+      "id": "7c1a1fd3-f808-4d59-94a3-753fcd46269b",
+      "createdAt": "2026-05-01T15:22:46.917Z",
+      "userId": "6eed653f-22a0-4172-8de9-69073fcb116e",
+      "author": "Anonymous IT worker",
+      "role": "Software Engineer",
+      "state": "California",
+      "anonymous": true,
+      "body": "I can take a messy requirement and deliver a working solution end-to-end\nThat’s what AI cannot replace easily"
+    },
+    {
+      "id": "b626735f-a210-41e4-b9d9-1939edc5c57f",
+      "createdAt": "2026-05-01T15:23:07.009Z",
+      "userId": "6eed653f-22a0-4172-8de9-69073fcb116e",
+      "author": "Anonymous IT worker",
+      "role": "Software Engineer",
+      "state": "California",
+      "anonymous": true,
+      "body": "Yes"
+    },
+    {
+      "id": "57dd3d87-38e2-4443-a05e-3f0acbbeaa97",
+      "createdAt": "2026-05-01T15:24:26.906Z",
+      "userId": "6eed653f-22a0-4172-8de9-69073fcb116e",
+      "author": "Anonymous IT worker",
+      "role": "Software Engineer",
+      "state": "California",
+      "anonymous": true,
+      "body": "But don't you think AI has that in hand now it can also take a messy requirement ask questions and deliver a solution according to the user needs now"
+    }
+  ]
+}
