@@ -716,6 +716,22 @@ function serveStatic(req, res, pathname) {
 
   fs.readFile(filePath, (error, data) => {
     if (error) {
+      const hasExtension = Boolean(path.extname(filePath));
+      if (!hasExtension) {
+        fs.readFile(path.join(PUBLIC_DIR, "index.html"), (fallbackError, fallbackData) => {
+          if (fallbackError) {
+            res.writeHead(404);
+            res.end("Not found");
+            return;
+          }
+          res.writeHead(200, {
+            "Content-Type": MIME_TYPES[".html"],
+            "Cache-Control": "no-store"
+          });
+          res.end(fallbackData);
+        });
+        return;
+      }
       res.writeHead(404);
       res.end("Not found");
       return;
@@ -743,6 +759,6 @@ const server = http.createServer(async (req, res) => {
 });
 
 ensureDatabase();
-server.listen(PORT, () => {
-  console.log(`AboveAI is running at http://localhost:${PORT}`);
+server.listen(PORT, "0.0.0.0", () => {
+  console.log(`AboveAI is running on port ${PORT}`);
 });
